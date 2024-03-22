@@ -44,7 +44,7 @@ Useless::Useless(int k, char ch) : n(k) {
     ShowObject();
 }
 
-Useless::Useless(const Useless &f) : n(f.n) {
+Useless::Useless(const Useless &f) : n(f.n) { // конструктор копирования, делает обычную детальную копию
     ++ct;
     cout << "copy const called; number of objects: " << ct << endl;
     pc = new char[n];
@@ -54,7 +54,7 @@ Useless::Useless(const Useless &f) : n(f.n) {
     ShowObject();
 }
 
-Useless::Useless(Useless &&f) : n(f.n) {
+Useless::Useless(Useless &&f) : n(f.n) { // конструктор переноса
     ++ct;
     cout << "move constructor called; number of objects: " << ct << endl;
     pc = f.pc;
@@ -103,9 +103,9 @@ void Useless::ShowData() const {
 
 int main() {
     Useless one(10, 'x');
-    Useless two = one;
+    Useless two = one; // вызов конструктор копирования
     Useless three(20, 'o');
-    Useless four(one + three);
+    Useless four(one + three); // вызов конструктора переноса
     cout << "object one: ";
     one.ShowData();
     cout << "object two: ";
