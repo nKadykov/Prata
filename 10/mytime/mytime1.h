@@ -1,5 +1,5 @@
-#ifndef MYTIME0_H_
-#define MYTIME0_H_
+#ifndef MYTIME1_H_
+#define MYTIME1_H_
 
 class Time {
     int hours;
