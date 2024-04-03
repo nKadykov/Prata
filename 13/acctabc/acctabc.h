@@ -31,7 +31,7 @@ public:
     Brass(const std::string &s = "Nullbody", long an = -1, double bal = 0.0): AcctABC(s, an, bal) {}
     virtual void Withdraw(double amt);
     virtual void ViewAcct() const;
-    virtual ~Brass();
+    virtual ~Brass() {};
 };
 
 class BrassPlus: public AcctABC {
