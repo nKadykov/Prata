@@ -81,7 +81,7 @@ void BrassPlus::ViewAcct() const {
 }
 
 void BrassPlus::Withdraw(double amt) {
-    Formatting f = SetFormat()
+    Formatting f = SetFormat();
     double bal = Balance();
     if(amt <= bal) {
         AcctABC::Withdraw(amt);
