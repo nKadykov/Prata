@@ -44,7 +44,7 @@ bool Stack<Type>::push(const Type &item) {
 template<class Type>
 bool Stack<Type>::pop(Type &item) {
     if(top > 0) {
-        item = item[--top];
+        item = items[--top];
         return true;
     }
     else {
